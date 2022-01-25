@@ -1,6 +1,5 @@
-import './App.css';
-import Sidebar from './components/Sidebar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
 import Home from './pages/Home';
 import Minister from './pages/Minister';
 import Leadership from './pages/Leadership';
@@ -11,7 +10,6 @@ import ICT from './pages/ICT';
 import LNBS from './pages/LNBS';
 import LPS from './pages/LPS';
 import ScienceAndTech from './pages/ScienceAndTech';
-import News from './pages/News';
 import Gallery from './pages/Gallery';
 import Speeches from './pages/Speeches';
 import Legislation from './pages/Legislation';
@@ -21,14 +19,13 @@ import Vacancy from './pages/Vacancy';
 import Contact from './pages/Contact';
 import AboutUS from './pages/AboutUS';
 import History from './pages/History';
-import { Reports, ReportsOne, ReportsTwo, ReportsThree } from './pages/Reports';
-import Team from './pages/Team';
 
 function App() {
   return (
     <Router>
       <Sidebar />
       <Routes>
+        <Route path='/' exact element={<Home />} />
         <Route path='/home' exact element={<Home />} />
         <Route path='/execMan' exact element={<Minister />} />
         <Route path='/execMan/minister' exact element={<Minister />} />
@@ -41,8 +38,8 @@ function App() {
         <Route path='/departments/lnbs' exact element={<LNBS />} />
         <Route path='/departments/lps' exact element={<LPS />} />
         <Route path='/departments/sciAndTec' exact element={<ScienceAndTech />} />
-        <Route path='/media' exact element={<News />} />
-        <Route path='/media/news' exact element={<News />} />
+        <Route path='/media' exact element={<Home />} />
+        <Route path='/media/news' exact element={<Home />} />
         <Route path='/media/gallery' exact element={<Gallery />} />
         <Route path='/media/speeches' exact element={<Speeches />} />
         <Route path='/documents' exact element={<Legislation />} />

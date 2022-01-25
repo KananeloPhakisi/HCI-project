@@ -1,11 +1,14 @@
-import React from 'react';
+import Pictures from "../components/pictures";
+import "./home.css";
 
 const Gallery = () => {
   return (
-    <div className='home'>
-      <h1>Gallery</h1>
-    </div>
-  );
+    <>
+      <div className="home">
+        <Pictures />
+      </div>
+    </>
+  )
 };
 
 export default Gallery;
